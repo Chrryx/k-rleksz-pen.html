@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andi néni</title>
+    <style>
+        body {
+            background: red url('triangle-pattern.png') repeat;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #heart {
+            font-size: 100px;
+            color: black;
+            cursor: pointer;
+        }
+
+        #message {
+            display: none;
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="heart" onclick="showMessage()">✞</div>
+    <div id="message">Kapok egy ötöst Andi néni?</div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+            setTimeout(function(){
+                document.getElementById('message').style.display = 'none';
+            }, 30000); // 30 másodpercig látható
+        }
+    </script>
+</body>
+</html>
